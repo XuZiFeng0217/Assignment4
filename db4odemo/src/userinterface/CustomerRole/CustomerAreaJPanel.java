@@ -350,6 +350,7 @@ public class CustomerAreaJPanel extends javax.swing.JPanel {
         }
         }
         ecosystem.getOrderDirectory().add(order);
+        System.out.println(ecosystem.getOrderDirectory());
         
     }//GEN-LAST:event_jButton2ActionPerformed
 

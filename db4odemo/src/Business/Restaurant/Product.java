@@ -55,6 +55,9 @@ public class Product {
         this.detail = detail;
         this.price = price;
     }
+    public Product() {
+
+    }
 
     @Override
     public String toString() {
