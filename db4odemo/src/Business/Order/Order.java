@@ -24,7 +24,7 @@ public class Order {
     private List<Map<Product,Integer>> products;
     private UserAccount customer;
     private double total;
-    //1.待接单 2.已接单待配送 3.已完成
+    //1.待接单 2.已接单待配送 3.已完成 4.其他情况
     private int status;
     private String comment;
 
