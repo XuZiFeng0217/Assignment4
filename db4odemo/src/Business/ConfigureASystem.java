@@ -11,6 +11,7 @@ import Business.Restaurant.Restaurant;
 import Business.Restaurant.RestaurantDirectory;
 import Business.Role.AdminRole;
 import Business.Role.CustomerRole;
+import Business.Role.DeliverManRole;
 import Business.Role.SystemAdminRole;
 import Business.UserAccount.UserAccount;
 import java.util.ArrayList;
@@ -44,11 +45,15 @@ public class ConfigureASystem {
         
         //设置餐厅经理账户
         UserAccount restaurant1 = system.getUserAccountDirectory().createUserAccount("r1", "123", new AdminRole());
+        //设置配送员账户
+        UserAccount delivery1 = system.getUserAccountDirectory().createUserAccount("d1", "123", new DeliverManRole());
+        
         
         //初始化customer数据
         Customer c1 = new Customer(1,"Jack","Smith");
         Customer c2 = new Customer(2,"Jack","Smith");
         Customer c3 = new Customer(3,"Jack","Smith");
+        uaCustomer1.setAddress("Hanjiang Road");
         CustomerDirectory customers = new CustomerDirectory();
         List<Customer> customerList = new ArrayList<Customer>();
         customerList.add(c1);
@@ -58,11 +63,13 @@ public class ConfigureASystem {
         system.setCustomerDirectory(customers);
         
         //初始化DeliveryMan数据
-        DeliveryMan man1 = new DeliveryMan(1,"Jack","Smith");
-        DeliveryMan man2 = new DeliveryMan(2,"lily","kally");
-        DeliveryMan man3 = new DeliveryMan(3,"mary","wood");
+        DeliveryMan man1 = new DeliveryMan(1,"d1","Smith");
+        DeliveryMan man2 = new DeliveryMan(2,"d2","kally");
+        DeliveryMan man3 = new DeliveryMan(3,"d3","wood");
         DeliveryManDirectory deliveryManDirectory = new DeliveryManDirectory();
         List<DeliveryMan> deliveryManList = new ArrayList<DeliveryMan>();
+        List<Order> ordersDelivery = new ArrayList<>();
+        man1.setOrders(ordersDelivery);
         deliveryManList.add(man1);
         deliveryManList.add(man2);
         deliveryManList.add(man3);
@@ -103,6 +110,7 @@ public class ConfigureASystem {
         uaCustomer1.setRole(new CustomerRole());
         uaCustomer2.setRole(new CustomerRole());
         restaurant1.setRole(new AdminRole());
+        delivery1.setRole(new DeliverManRole());
         return system;
     }
     

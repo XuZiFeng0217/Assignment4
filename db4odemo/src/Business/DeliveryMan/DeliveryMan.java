@@ -5,6 +5,9 @@
  */
 package Business.DeliveryMan;
 
+import Business.Order.Order;
+import java.util.List;
+
 /**
  *
  * @author harold
@@ -13,6 +16,17 @@ public class DeliveryMan {
     private String firstName;
     private String lastName;
     private int id;
+    List<Order> orders;
+
+    public List<Order> getOrders() {
+        return orders;
+    }
+
+    public void setOrders(List<Order> orders) {
+        this.orders = orders;
+    }
+    
+    
 
     public String getFirstName() {
         return firstName;

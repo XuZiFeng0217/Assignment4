@@ -56,7 +56,7 @@ public class RequestLabTestJPanel extends javax.swing.JPanel {
         for (Order order : newOrders){
             Object[] row = new Object[5];
             row[0] = order;
-            row[1] = order.getProducts();
+            row[1] = order.getRestaurant().getName();
             row[2] = order.getTotal();
             row[3] = order.getStatus();
             row[4] = order.getComment();
@@ -106,7 +106,7 @@ public class RequestLabTestJPanel extends javax.swing.JPanel {
                 {null, null, null, null, null}
             },
             new String [] {
-                "Restaurant", "Detail", "TotalPrice", "Status", "Comments"
+                "Detail", "Restaurant", "TotalPrice", "Status", "Comments"
             }
         ));
         jScrollPane1.setViewportView(jTable1);

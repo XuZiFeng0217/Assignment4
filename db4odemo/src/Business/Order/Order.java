@@ -88,7 +88,7 @@ public class Order {
 
     @Override
     public String toString() {
-        return this.getRestaurant().getName();
+        return this.getProducts().toString();
     }
     
     
