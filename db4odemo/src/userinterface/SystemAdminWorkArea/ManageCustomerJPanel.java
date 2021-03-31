@@ -266,6 +266,7 @@ public class ManageCustomerJPanel extends javax.swing.JPanel {
             c1.setId(Integer.parseInt(idField.getText()));
             populateTable();
         }
+        JOptionPane.showMessageDialog(null, "Success!", "Warning", JOptionPane.WARNING_MESSAGE);
 
     }//GEN-LAST:event_jButton3ActionPerformed
 
@@ -279,7 +280,9 @@ public class ManageCustomerJPanel extends javax.swing.JPanel {
         }
         Customer c1 = (Customer) tblCutomers.getValueAt(selectedRowIndex, 0);
         customerDirectory.removeCutomer(c1);
+        JOptionPane.showMessageDialog(null, "Success", "Warning", JOptionPane.WARNING_MESSAGE);
         populateTable();
+        
     }//GEN-LAST:event_jButton2ActionPerformed
 
     private void jButton4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton4ActionPerformed

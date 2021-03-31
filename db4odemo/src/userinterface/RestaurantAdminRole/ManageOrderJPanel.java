@@ -184,10 +184,13 @@ public class ManageOrderJPanel extends javax.swing.JPanel {
         for(DeliveryMan deliveryMan : manList){
             if(deliveryMan.getFirstName().equals(jComboBox1.getSelectedItem())){
                 order.setDeliveryMan(deliveryMan);
+                order.setStatus(2);
                 deliveryMan.getOrders().add(order);
                
             }
         }
+        populateTable(allOrders);
+        JOptionPane.showMessageDialog(null, "You have accepted an order successfully!", "Warning", JOptionPane.WARNING_MESSAGE);
         
         
         
@@ -205,7 +208,7 @@ public class ManageOrderJPanel extends javax.swing.JPanel {
         Order order = (Order) jTable1.getValueAt(selectedRowIndex, 0);
        
         allOrders.remove(order);
-        
+        JOptionPane.showMessageDialog(null, "You have declined an order successfully!", "Warning", JOptionPane.WARNING_MESSAGE);
         populateTable(allOrders);
         
         

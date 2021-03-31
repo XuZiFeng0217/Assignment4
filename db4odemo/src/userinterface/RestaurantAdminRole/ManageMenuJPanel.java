@@ -204,7 +204,7 @@ public class ManageMenuJPanel extends javax.swing.JPanel {
         if(flag==1){
             String firstName = producNameField.getText();
             String lastName = detailField.getText();
-            int id = Integer.parseInt(priceField.getText());
+            double id = Double.parseDouble(priceField.getText());
             Product product = new Product();
             product.setName(producNameField.getText());
             product.setDetail(detailField.getText());
@@ -227,6 +227,7 @@ public class ManageMenuJPanel extends javax.swing.JPanel {
             product.setPrice(Double.parseDouble(priceField.getText()));
             populateTable();
         }
+         JOptionPane.showMessageDialog(null, "Success!", "Warning", JOptionPane.WARNING_MESSAGE);
     }//GEN-LAST:event_jButton4ActionPerformed
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
@@ -268,6 +269,7 @@ public class ManageMenuJPanel extends javax.swing.JPanel {
         }
         Product product = (Product) ProductTable.getValueAt(selectedRowIndex, 0);
         restaurant.getProductList().remove(product);
+        JOptionPane.showMessageDialog(null, "Success!", "Warning", JOptionPane.WARNING_MESSAGE);
         populateTable();
     }//GEN-LAST:event_jButton2ActionPerformed
 

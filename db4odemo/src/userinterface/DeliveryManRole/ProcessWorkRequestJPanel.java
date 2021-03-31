@@ -8,6 +8,7 @@ import Business.Order.Order;
 import Business.WorkQueue.LabTestWorkRequest;
 import java.awt.CardLayout;
 import java.awt.Component;
+import javax.swing.JOptionPane;
 import javax.swing.JPanel;
 
 /**
@@ -103,8 +104,10 @@ public class ProcessWorkRequestJPanel extends javax.swing.JPanel {
     private void submitJButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_submitJButtonActionPerformed
         if(jComboBox1.getSelectedItem().equals("Complete")){
             order.setStatus(3);
+            JOptionPane.showMessageDialog(null, "You have conpleted an order!", "Warning", JOptionPane.WARNING_MESSAGE);
         }else if(jComboBox1.getSelectedItem().equals("Fail")){
             order.setStatus(4);
+            JOptionPane.showMessageDialog(null, "You have failed to complete an order!", "Warning", JOptionPane.WARNING_MESSAGE);
         }
         
     }//GEN-LAST:event_submitJButtonActionPerformed

@@ -55,7 +55,7 @@ public class AdminWorkAreaJPanel extends javax.swing.JPanel {
 
         setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        userJButton.setText("Manage Restaurant Info");
+        userJButton.setText("View Comments");
         userJButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 userJButtonActionPerformed(evt);
@@ -93,6 +93,10 @@ public class AdminWorkAreaJPanel extends javax.swing.JPanel {
 
     private void userJButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_userJButtonActionPerformed
         // TODO add your handling code here:
+        ManageInfoJPanel mijp = new ManageInfoJPanel(userProcessContainer,thisRestaurant,ecosystem);
+        userProcessContainer.add("mijp", mijp);
+        CardLayout layout = (CardLayout) userProcessContainer.getLayout();
+        layout.next(userProcessContainer);
         
     }//GEN-LAST:event_userJButtonActionPerformed
 

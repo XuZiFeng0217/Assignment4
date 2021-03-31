@@ -244,6 +244,7 @@ public class ManageRestaurantJpanel extends javax.swing.JPanel {
             restaurant.setManager(ManagerField.getText());
             populateTable();
         }
+        JOptionPane.showMessageDialog(null, "Success", "Warning", JOptionPane.WARNING_MESSAGE);
     }//GEN-LAST:event_jButton3ActionPerformed
 
     private void jButton4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton4ActionPerformed
@@ -290,6 +291,7 @@ public class ManageRestaurantJpanel extends javax.swing.JPanel {
         Restaurant restaurant = (Restaurant) tblRestaurant.getValueAt(selectedRowIndex, 0);
         restaurantDirectory.remove(restaurant);
         populateTable();
+        JOptionPane.showMessageDialog(null, "Success", "Warning", JOptionPane.WARNING_MESSAGE);
     }//GEN-LAST:event_jButton2ActionPerformed
     private void populateTable() {
         DefaultTableModel model = (DefaultTableModel) tblRestaurant.getModel();
@@ -302,6 +304,7 @@ public class ManageRestaurantJpanel extends javax.swing.JPanel {
             row[2] = restaurant.getManager();
             
             model.addRow(row);
+            
         }
     }
 

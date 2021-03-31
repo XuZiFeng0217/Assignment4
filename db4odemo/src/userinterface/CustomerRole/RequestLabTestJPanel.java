@@ -130,6 +130,7 @@ public class RequestLabTestJPanel extends javax.swing.JPanel {
         }
         Order order = (Order)jTable1.getValueAt(selectedRowIndex, 0);
         order.setComment(jTextField1.getText());
+        JOptionPane.showMessageDialog(null, "Success", "Warning", JOptionPane.WARNING_MESSAGE);
         populateTable();
 
     }//GEN-LAST:event_requestTestJButtonActionPerformed
